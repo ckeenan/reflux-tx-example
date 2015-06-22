@@ -22,7 +22,7 @@ config.plugins = config.plugins.concat(
 
             data = data.replace(
                 '</head>',
-                '<link rel="stylesheet" href="/js/App.css"/></head>'
+                '<link rel="stylesheet" href="/app/App.css"/></head>'
             );
 
             if (production) {

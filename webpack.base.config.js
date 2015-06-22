@@ -3,7 +3,7 @@
 var webpack = require('webpack');
 
 var postcssTools = require('webpack-postcss-tools');
-var varMap = postcssTools.makeVarMap('src/js/App.css');
+var varMap = postcssTools.makeVarMap('src/app/App.css');
 
 module.exports = {
   target: 'web',
