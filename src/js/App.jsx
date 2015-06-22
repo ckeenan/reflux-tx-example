@@ -18,9 +18,9 @@ export default React.createClass({
     return (
       <div id='app-container' className='app-container'>
         <Locations id='controllers-container' className='controllers-container'>
-            <Location path='/'             handler = { ExampleController } />
-            <Location path='/example(/*)'  handler = { ExampleController } />
-            <NotFound                      handler = { NotFoundPage } />
+            <Location path='/'            handler = { ExampleController } />
+            <Location path='/example(/*)' handler = { ExampleController } />
+            <NotFound                     handler = { NotFoundPage } />
         </Locations>
       </div>
     );

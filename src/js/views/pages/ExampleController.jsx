@@ -14,7 +14,6 @@ import Header       from '../../components/Header.jsx';
 // Router Components
 var Locations = Router.Locations; // Router Container
 var Location  = Router.Location;  // Specific Route
-var NotFound  = Router.NotFound;  // Fallback to 404
 
 export default React.createClass({
   mixins: [Reflux.ListenerMixin], // Will mount and unmount eventListener automatically
@@ -32,7 +31,7 @@ export default React.createClass({
       <div id="exmaple-controller-container" className="exmaple-controller-container">
         <Header/>
         <Locations contextual id="exmaple-pages-container" className="exmaple-pages-container">
-            <Location path="/"              handler = { ExamplePage1 } storeData={ExampleRefluxStore.data}/>
+            <Location path="/"      handler = { ExamplePage1 } storeData={ExampleRefluxStore.data}/>
             <Location path="/page1" handler = { ExamplePage1 } storeData={ExampleRefluxStore.data}/>
             <Location path="/page2" handler = { ExamplePage2 } storeData={ExampleRefluxStore.data}/>
         </Locations>
