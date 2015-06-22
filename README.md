@@ -15,6 +15,7 @@ Technologies
 - [Jest](http://facebook.github.io/jest/) - Painless Javascript Unit Testing
 - [Nightwatch](http://nightwatchjs.org/) - is an easy to use Node.js based End-to-End (E2E) testing solution for browser based apps and websites.
 - [PostCSS](https://github.com/postcss/postcss) - is a tool for transforming CSS with JS plugins
+- [SuitCSS](https://suitcss.github.io/)
 - [Babel](https://babeljs.io/) - Babel will turn your ES6+ code into ES5 friendly code, so you can start using it right now without waiting for browser support
 - [ESLint](http://eslint.org/) - The pluggable linting utility for JavaScript and JSX 
 
