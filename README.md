@@ -1,4 +1,7 @@
-Start with `npm start` from the `frontend` folder.
+Start with `npm start`
+
+Forked from [here](https://github.com/shanewilson/react-webpack-example)
+
 See `package.json` for other scripts
 
 `Buzzwords: #reactjs #immutablejs #webpack #jest #selenium #hot-module-replacement #es6 #babeljs #authentication #postcss #eslint`
