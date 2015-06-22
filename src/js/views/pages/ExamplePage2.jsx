@@ -4,9 +4,6 @@ import React from 'react/addons';
 // Store
 import ExampleRefluxStore from '../../stores/ExampleRefluxStore.jsx';
 
-// Components
-import Header             from '../../components/Header.jsx';
-
 export default React.createClass({
 
   // Local Method

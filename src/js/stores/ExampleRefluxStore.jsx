@@ -31,7 +31,7 @@ export default Reflux.createStore({
     this.updatedStoreData('setStoreData', this.data[data]);
   },
 
-  updatedStoreData(functionName, data) {
+  updatedStoreData(data) {
     this.trigger({
         store: 'DocumentRefluxStore',
         event: 'updatedStoreData',
