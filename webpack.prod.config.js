@@ -15,7 +15,7 @@ config.output = {
   pathInfo: false,
   publicPath: '/js/',
   filename: '[name].[hash].min.js',
-  css: 'style.[hash].min.css',
+  css: 'app.[hash].min.css',
   chunkFilename: '[id].js'
 };
 config.postcss = [

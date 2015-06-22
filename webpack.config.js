@@ -7,7 +7,7 @@ var config = production ? require('./webpack.prod.config.js') : require('./webpa
 
 config.module.loaders = config.module.loaders.concat([
   {test: /\.jsx?$/, loader: 'babel?optional=runtime', exclude: /node_modules/},
-  {test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css?importLoaders=1!postcss')}
+  {test: /\.css$/, loader: ExtractTextPlugin.extract('App', 'css?importLoaders=1!postcss')}
 ]);
 
 config.plugins = config.plugins.concat(
@@ -22,7 +22,7 @@ config.plugins = config.plugins.concat(
 
             data = data.replace(
                 '</head>',
-                '<link rel="stylesheet" href="/js/style.css"/></head>'
+                '<link rel="stylesheet" href="/js/App.css"/></head>'
             );
 
             if (production) {

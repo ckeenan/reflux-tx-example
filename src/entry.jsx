@@ -1,7 +1,7 @@
-// Dependencies for building
+// CSS Dependencies
 require('font-awesome-webpack');
 require('suitcss-base');
-require('./css/styles.css');
+require('./js/App.css');
 
 // Modules
 import React  from  'react/addons';

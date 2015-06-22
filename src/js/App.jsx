@@ -7,19 +7,19 @@ var Locations = Router.Locations;
 var Location  = Router.Location;
 var NotFound  = Router.NotFound;
 
-// Controller
-import ExampleController from './views/pages/ExampleController.jsx';
+// Features
+import ExampleFeature from './ExampleFeature/ExampleFeature.jsx';
 
-// Pages
-import NotFoundPage      from './views/pages/Page404.jsx';
+// Global Pages
+import NotFoundPage      from './global/pages/Page404.jsx';
 
 export default React.createClass({
   render: function() {
     return (
       <div id='app-container' className='app-container'>
-        <Locations id='controllers-container' className='controllers-container'>
-            <Location path='/'            handler = { ExampleController } />
-            <Location path='/example(/*)' handler = { ExampleController } />
+        <Locations id='features-container' className='features-container'>
+            <Location path='/'            handler = { ExampleFeature } />
+            <Location path='/example(/*)' handler = { ExampleFeature } />
             <NotFound                     handler = { NotFoundPage } />
         </Locations>
       </div>

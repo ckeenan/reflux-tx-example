@@ -4,12 +4,14 @@ import Router from 'react-router-component';
 import Reflux from 'reflux';
 
 // Store
-import ExampleRefluxStore from '../../stores/ExampleRefluxStore.jsx';
+import ExampleRefluxStore from '../stores/ExampleRefluxStore.jsx';
 
 // Pages
-import ExamplePage1 from '../../views/pages/ExamplePage1.jsx';
-import ExamplePage2 from '../../views/pages/ExamplePage2.jsx';
-import Header       from '../../components/Header.jsx';
+import ExamplePage1 from '../pages/ExamplePage1.jsx';
+import ExamplePage2 from '../pages/ExamplePage2.jsx';
+
+// Global Components
+import Header       from '../../global/components/Header.jsx';
 
 // Router Components
 var Locations = Router.Locations; // Router Container
@@ -28,9 +30,9 @@ export default React.createClass({
 
   render() {
     return (
-      <div id="exmaple-controller-container" className="exmaple-controller-container">
+      <div id="example-controller-container" className="example-controller-container">
         <Header/>
-        <Locations contextual id="exmaple-pages-container" className="exmaple-pages-container">
+        <Locations contextual id="example-pages-container" className="example-pages-container">
             <Location path="/"      handler = { ExamplePage1 } storeData={ExampleRefluxStore.data}/>
             <Location path="/page1" handler = { ExamplePage1 } storeData={ExampleRefluxStore.data}/>
             <Location path="/page2" handler = { ExamplePage2 } storeData={ExampleRefluxStore.data}/>

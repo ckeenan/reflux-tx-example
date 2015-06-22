@@ -3,7 +3,7 @@
 var webpack = require('webpack');
 
 var postcssTools = require('webpack-postcss-tools');
-var varMap = postcssTools.makeVarMap('src/css/styles.css');
+var varMap = postcssTools.makeVarMap('src/js/App.css');
 
 module.exports = {
   target: 'web',
@@ -13,7 +13,7 @@ module.exports = {
     pathInfo: true,
     publicPath: '/js/',
     filename: 'main.js',
-    css: 'style.css'
+    css: 'App.css'
   },
   module: {
     preLoaders: [
