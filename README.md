@@ -1,22 +1,17 @@
-Start with `npm start`
+Install modules and start server with: `npm start`
 
-Forked from [here](https://github.com/shanewilson/react-webpack-example)
+Learning: [React Lifecycle](http://javascript.tutorialhorizon.com/2014/09/13/execution-sequence-of-a-react-components-lifecycle-methods/)
 
-See `package.json` for other scripts
+See `package.json -> scripts: { ... }` for other scripts
 
-`Buzzwords: #reactjs #immutablejs #webpack #jest #selenium #hot-module-replacement #es6 #babeljs #authentication #postcss #eslint`
-
-- [Version with Stylus](https://github.com/shanewilson/react-webpack-example/tree/64e435063f6e9f8aa880965f7ea5099d28e7bf50)
-- [Version with Gulp](https://github.com/shanewilson/react-webpack-example/tree/8132c077870d41fbb08c9b2562b6204ea5cc4a75)
-- [Version with Browser-sync](https://github.com/shanewilson/react-webpack-example/tree/d7d251bea5935ceafdd89700ad6ff986c32c506c)
 
 Technologies
-=
+=============
 
 - [React](http://facebook.github.io/react/) - A Javascript Library For Building User Interfaces
-- [React-Router](https://github.com/rackt/react-router) - A complete routing library for React.
-- [ImmutableJS](http://facebook.github.io/immutable-js/) - Immutable collections for JavaScript
-- [Webpack](http://webpack.github.io/) - Module Bundler
+- [Reflux](https://github.com/spoike/refluxjs) - A simple library for uni-directional dataflow application architecture inspired by ReactJS Flux
+- [React-Router-Component](http://strml.viewdocs.io/react-router-component) - Allows you to define routes in your React application in a declarative manner, directly as a part of your component hierarchy.
+- [Webpack](http://webpack.github.io/) - Module Bundler w/ Live Injection
 - [Jest](http://facebook.github.io/jest/) - Painless Javascript Unit Testing
 - [Nightwatch](http://nightwatchjs.org/) - is an easy to use Node.js based End-to-End (E2E) testing solution for browser based apps and websites.
 - [PostCSS](https://github.com/postcss/postcss) - is a tool for transforming CSS with JS plugins
@@ -26,10 +21,11 @@ Technologies
 Development
 =
 
-The development server is setup using Webpack
+The development server is setup using Webpack w/ `npm start`
 
 ```
 > npm start
+...
 https://localhost:8080/
 webpack result is served from /js/
 content is served from .../react-webpack-example/src
@@ -48,7 +44,7 @@ webpack: bundle is now VALID.
 Tests
 =
 
-Unit tests are run using Jest.
+Unit tests are run using Jest w/ `npm test`.
 
 ```
 > npm test
@@ -62,7 +58,7 @@ Found 3 matching tests...
 Run time: 5.97s
 ```
 
-Browser tests are run with Nightwatch
+Browser tests are run with Nightwatch w/ `npm run browser`
 
 ```
 > npm run browser
@@ -94,10 +90,10 @@ Started child process for env:  chrome
 Production
 =
 
-Webpack bundles all the assets in production mode and Gulp creates unique file names for caching
+Webpack bundles all the assets in production mode and Gulp creates unique file names for caching w/ `NODE_ENV=production npm run build`
 
 ```
-NODE_ENV=production npm run build
+> NODE_ENV=production npm run build
 ...
 Hash: a347df5e60d93385aa06
 Version: webpack 1.8.9
@@ -122,8 +118,7 @@ Serving HTTP on 0.0.0.0 port 8000
 ```
 
 Resources
-=
-
-- https://github.com/petehunt/webpack-howto
-- http://gaearon.github.io/react-hot-loader/
-- https://github.com/auth0/react-flux-jwt-authentication-sample
+===========
+- Forked from [here](https://github.com/shanewilson/react-webpack-example)
+- [Webpack: How To](https://github.com/petehunt/webpack-howto)
+- [React-Hot-Loader](http://gaearon.github.io/react-hot-loader/)
