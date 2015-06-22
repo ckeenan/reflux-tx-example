@@ -31,10 +31,10 @@ export default React.createClass({
     return (
       <div id="exmaple-controller-container" className="exmaple-controller-container">
         <Header/>
-        <Locations id="exmaple-pages-container" className="exmaple-pages-container">
+        <Locations contextual id="exmaple-pages-container" className="exmaple-pages-container">
             <Location path="/"              handler = { ExamplePage1 } storeData={ExampleRefluxStore.data}/>
-            <Location path="/example/page1" handler = { ExamplePage1 } storeData={ExampleRefluxStore.data}/>
-            <Location path="/example/page2" handler = { ExamplePage2 } storeData={ExampleRefluxStore.data}/>
+            <Location path="/page1" handler = { ExamplePage1 } storeData={ExampleRefluxStore.data}/>
+            <Location path="/page2" handler = { ExamplePage2 } storeData={ExampleRefluxStore.data}/>
         </Locations>
       </div>
     );
