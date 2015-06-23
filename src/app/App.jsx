@@ -14,7 +14,7 @@ import ExampleFeature from './ExampleFeature/ExampleFeature.jsx';
 import NotFoundPage      from './global/pages/Page404.jsx';
 
 export default React.createClass({
-  render: function() {
+  render() {
     return (
       <div id='app-container' className='app-container'>
         <Locations id='features-container' className='features-container'>

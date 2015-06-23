@@ -39,14 +39,30 @@ export default Reflux.createStore({
     });
   },
 
-  callAPI(functionName, input) {
-    // var url = 'http://104.236.65.136:38080';
-    // var path = '/api/documentSign/'
-
+  getAccounts() {
     // Request({
-    //   method: 'post',
-    //   url: url + path + functionName,
-    //   data: JSON.stringify(input) // Might need to be JSON, not stringified JSON
+    //   method: 'get',
+    //   url: "http://stablenet.blockapps.net/query/account"
+    // }).then((data) => {
+    //   this.setStoreData(data.data);
+    // }).catch((data) => {
+    //   console.log(data);
+    // });
+  },
+  getTransactions() {
+    // Request({
+    //   method: 'get',
+    //   url: "http://stablenet.blockapps.net/query/block"
+    // }).then((data) => {
+    //   this.setStoreData(data.data);
+    // }).catch((data) => {
+    //   console.log(data);
+    // });
+  },
+  getBlocks() {
+    // Request({
+    //   method: 'get',
+    //   url: "http://stablenet.blockapps.net/query/transaction"
     // }).then((data) => {
     //   this.setStoreData(data.data);
     // }).catch((data) => {
