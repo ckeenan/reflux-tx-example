@@ -4,6 +4,7 @@ var config = require('./webpack.base.config.js');
 
 config.devServer = {
   contentBase: 'src',
+  noInfo: true,
   https: false,
   stats: {
     colors: true
