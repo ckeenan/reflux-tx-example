@@ -1,6 +1,7 @@
 {
   "parser": "babel-eslint",
   "rules": {
+    "no-trailing-spaces": [0, { "skipBlankLines": true }],
     "no-unused-expressions": [0],
     "no-underscore-dangle": [0],
     "no-reserved-keys": [2],
