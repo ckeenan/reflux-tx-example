@@ -1,5 +1,5 @@
-/* Variables */
-@import './global/styles/_variables.css';
-
-/* Features */
-@import './ExampleFeature/ExampleFeature.css';
+button {
+        background: lightgray;
+        border-radius: 10px;
+        padding: 5px;
+}

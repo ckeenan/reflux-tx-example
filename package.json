@@ -38,7 +38,9 @@
     "react-async": "^2.1.0",
     "react-router-component": "^0.25.1",
     "react-tools": "0.13.2",
-    "reflux": "^0.2.8"
+    "reflux-tx": "*",
+    "reflux": "^0.2.8",
+    "web3": "0.9.X"
   },
   "devDependencies": {
     "autoprefixer-core": "^5.1.11",
@@ -54,6 +56,8 @@
     "eslint": "^0.20.0",
     "eslint-loader": "^0.11.1",
     "eslint-plugin-react": "^2.2.0",
+    "exports-loader": "^0.6.2",
+    "imports-loader": "*",
     "extract-text-webpack-plugin": "^0.7.0",
     "flowcheck": "^0.2.6",
     "flowcheck-loader": "^1.0.0",
@@ -65,7 +69,9 @@
     "immutable": "3.7.2",
     "jest": "^0.1.39",
     "jest-cli": "^0.4.0",
+    "json-loader": "*",
     "jsx-loader": "0.13.1",
+    "less-loader": "*",
     "nightwatch": "0.6.4",
     "npm-check-updates": "1.5.1",
     "postcss-bem-linter": "^0.2.0",

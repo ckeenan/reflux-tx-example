@@ -24,9 +24,13 @@ module.exports = {
       {test: /\.gif$/, loader: 'url?mimetype=image/gif'},
       {test: /\.jpe?g$/, loader: 'url?mimetype=image/jpeg'},
       {test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url?limit=10000&minetype=application/font-woff'},
-      {test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'file'}
+      {test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'file'},
+      {test: /localforage\/dist\/localforage.js/, loader: 'exports?localforage'}
     ],
-    noParse: /\.min\.js/
+    noParse: [
+      /\.min\.js/,
+      /localforage\/dist\/localforage.js/
+      ]
   },
   postcss: [
     // Plugins seem to be first in last out
@@ -47,7 +51,10 @@ module.exports = {
     //})
   ],
   resolve: {
-    extentions: ['js', 'jsx', 'css']
+    extentions: ['js', 'jsx', 'css'],
+    alias: {
+      'localforage': 'localforage/dist/localforage.js'
+    }
   }
   ,
   plugins: [

@@ -6,9 +6,18 @@ var production = process.env.NODE_ENV === 'production';
 var config = production ? require('./webpack.prod.config.js') : require('./webpack.base.config.js');
 
 config.module.loaders = config.module.loaders.concat([
+  {test: /\.json$/, loader: 'json-loader' },
   {test: /\.jsx?$/, loader: 'babel?optional=runtime', exclude: /node_modules/},
-  {test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css?importLoaders=1!postcss')}
+  {test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css?importLoaders=1!postcss')},
+  {test: /localforage\/dist\/localforage.js/, loader: 'exports?localforage'}
 ]);
+
+config.module.noParse = [/localforage\/dist\/localforage.js/];
+config.resolve = {
+  alias: {
+    'localforage': 'localforage/dist/localforage.js'
+  }
+};
 
 config.plugins = config.plugins.concat(
     [
