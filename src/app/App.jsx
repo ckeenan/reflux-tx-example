@@ -1,28 +1,65 @@
 // Modules
 import React  from 'react/addons';
-import Router from 'react-router-component';
-
-// Router Components
-var Locations = Router.Locations;
-var Location  = Router.Location;
-var NotFound  = Router.NotFound;
-
-// Features
-import ExampleFeature from './ExampleFeature/ExampleFeature.jsx';
-
-// Global Pages
-import NotFoundPage      from './global/pages/Page404.jsx';
+import web3   from 'web3';
+import { TXActions, TXComponent } from 'reflux-tx';
+import TXList from './TXList.jsx';
 
 export default React.createClass({
+  getInitialState() {
+    return {
+      connectionResult: '',
+      provider: 'http://localhost:8545',
+      connected: false
+    };
+  },
+  sendTx() {
+    var coinbase = web3.eth.coinbase;
+    var hash = web3.eth.sendTransaction({
+      from: coinbase,
+      to: coinbase,
+      value: 1
+    });
+    TXActions.add({hash: hash, extraInfo: 'test'});
+  },
+  clear() {
+    TXActions.clearAll();
+  },
+  setProvider() {
+    web3.setProvider(new web3.providers.HttpProvider(this.state.provider));
+    if (web3.isConnected()) {
+      TXActions.connect({provider: this.state.provider});
+
+      this.setState({connectionResult: '', connected: true});
+    } else this.setState({connectionResult: 'Could not set provider to ' + this.state.provider});
+  },
+  updateProvider(e) {
+    this.setState({provider: e.target.value});
+  },
   render() {
-    return (
-      <div id='app-container' className='app-container'>
-        <Locations id='features-container' className='features-container'>
-            <Location path='/'            handler = { ExampleFeature } />
-            <Location path='/example(/*)' handler = { ExampleFeature } />
-            <NotFound                     handler = { NotFoundPage } />
-        </Locations>
-      </div>
-    );
+    if (this.state.connected)
+      return (
+        <div>
+          <div>
+            <button onClick={this.sendTx}>Send some wei to myself</button>
+          </div>
+          <div>
+            <button onClick={this.clear}>Clear TXs</button>
+          </div>
+          <TXComponent filter={{extraInfo: 'test'}} keys={['pending', 'unconfirmed']}>
+            <TXList />
+          </TXComponent>
+        </div>
+      );
+    else
+      return (
+          <div>
+            Enter web3 provider:
+            <input value={this.state.provider} onChange={this.updateProvider}></input>
+            <button onClick={this.setProvider}>Submit</button>
+            <div>
+              {this.state.connectionResult}
+            </div>
+          </div>
+          );
   }
 });
