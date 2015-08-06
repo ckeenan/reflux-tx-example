@@ -1,9 +1,0 @@
-h1, nav, nav li {
-	display: inline-block;
-}
-nav {
-	float: right;
-}
-nav li {
-	margin-left: 10px;
-}
