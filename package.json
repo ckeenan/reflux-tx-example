@@ -1,16 +1,16 @@
 {
-  "name": "react-webpack-example",
+  "name": "reflux-tx-example",
   "private": true,
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shanewilson/react-webpack-example.git"
+    "url": "https://github.com/ckeenan/reflux-tx-example.git"
   },
-  "homepage": "https://github.com/shanewilson/react-webpack-example",
+  "homepage": "https://github.com/ckeenan/reflux-tx-example",
   "author": {
-    "name": "Shane Wilson",
-    "email": "shanezilla@gmail.com",
-    "url": "https://github.com/shanewilson/"
+    "name": "Connor Keenan",
+    "email": "ckeenan89@gmail.com",
+    "url": "https://github.com/ckeenan/"
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
