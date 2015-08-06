@@ -2,4 +2,5 @@ This is an example of how to use [reflux-tx](https://github.com/ConsenSys/reflux
 
 
 Install modules and start server with: `npm start`
+
 Open [http://localhost:8080/](http://localhost:8080/) in the browser
