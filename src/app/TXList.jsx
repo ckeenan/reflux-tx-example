@@ -1,22 +1,10 @@
 import React  from 'react/addons';
 
-var mapping = {
-  pending: [
-    'info',
-    'data'
-  ],
-  unconfirmed: [
-    'info',
-    'data',
-    'receipt'
-  ]
-};
-
 export default React.createClass({
   getDefaultProps() {
     return {
       pending: [],
-      unconfirmed: [],
+      received: [],
       blockNumber: 0
     };
   },
@@ -41,7 +29,7 @@ export default React.createClass({
   },
   render() {
     var pendingEls = this.props.pending.map(this.genListElement);
-    var unconfirmedEls = this.props.unconfirmed.map(this.genListElement);
+    var unconfirmedEls = this.props.received.map(this.genListElement);
     return (
         <div>
           <div>
@@ -49,7 +37,7 @@ export default React.createClass({
           </div>
           <h3>Transactions Pending</h3>
           {pendingEls}
-          <h3>Unconfirmed Transactions</h3>
+          <h3>Received Transactions</h3>
           {unconfirmedEls}
         </div>
         );

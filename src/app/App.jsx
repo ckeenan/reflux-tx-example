@@ -45,7 +45,7 @@ export default React.createClass({
           <div>
             <button onClick={this.clear}>Clear TXs</button>
           </div>
-          <TXComponent filter={{extraInfo: 'test'}} keys={['pending', 'unconfirmed']}>
+          <TXComponent filter={{extraInfo: 'test'}} keys={['pending', 'received']}>
             <TXList />
           </TXComponent>
         </div>
